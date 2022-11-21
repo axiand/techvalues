@@ -225,43 +225,73 @@ div.text-wrapper {
     color: #222222;
     display: inline-block;
 }
-div.equality {
-    background-color: #f44336;
+div.frontend {
+    background-color: #e04b0f;
     text-align: left;
     border-right-style: solid;
 }
-div.wealth {
-    background-color: #00897b;
+div.backend {
+    background-color: #1628ce;
     text-align: right;
     border-left-style: solid;
 }
-div.liberty {
-    background-color: #ffeb3b;
+div.foss{
+    background-color: #df841c;
     text-align: left;
     border-right-style: solid;
 }
-div.authority {
-    background-color: #3f51b5;
+div.proprietary {
+    background-color: #dad75b;
     text-align: right;
     border-left-style: solid;
 }
-div.peace {
-    background-color: #03a9f4;
+div.basic {
+    background-color: #638a0a;
     text-align: right;
     border-left-style: solid;
 }
-div.might {
-    background-color: #ff9800;
+div.poweruser {
+    background-color: #0ad17e;
     text-align: left;
     border-right-style: solid;
 }
-div.progress {
-    background-color: #9c27b0;
+div.newschool {
+    background-color: #fb2d2d;
     text-align: right;
     border-left-style: solid;
 }
-div.tradition {
-    background-color: #8bc34a;
+div.oldschool {
+    background-color: #9b180f;
+    text-align: left;
+    border-right-style: solid;
+}
+div.convenience {
+    background-color: #c71de9;
+    text-align: right;
+    border-left-style: solid;
+}
+div.privacy {
+    background-color: #df3994;
+    text-align: left;
+    border-right-style: solid;
+}
+div.popular {
+    background-color: #7dc59d;
+    text-align: right;
+    border-left-style: solid;
+}
+div.niche {
+    background-color: #056937;
+    text-align: left;
+    border-right-style: solid;
+}
+div.centralized {
+    background-color: #3ae224;
+    text-align: right;
+    border-left-style: solid;
+}
+div.decentralized {
+    background-color: #66bb5b;
     text-align: left;
     border-right-style: solid;
 }
@@ -282,4 +312,16 @@ span.weight-300 {
     margin: 8pt;
     margin-left: auto;
     margin-right: auto;
+}
+
+.value-badge {
+    border: 4px solid rgb(31, 29, 29);
+    height:84pt;
+    width:104pt;
+    text-align: center !important;
+}
+.value-badge>p {
+    line-height: 36pt;
+    font-size: 14pt;
+    color: white;
 }
