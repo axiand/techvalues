@@ -28,17 +28,35 @@
 <button class="button" onclick="location.href='instructions.html';" style="font-size:36pt;">Click here to start!</button>
 <br><hr>
 <h2>What is this?</h2>
-    <p>TechValues is a quiz that attempts to assign percentages for twelve different values within the field of technology. You will be presented with a statement, and then you will answer with your opinion on the statement, from <b>Strongly Agree</b> to <b>Strongly Disagree</b>, with each answer slightly affecting your scores. At the end of the quiz, your answers will be compared to the maximum possible for each value, thus giving you a percentage. Answer honestly!<br /><br />
+    <p>TechValues is a quiz that attempts to assign percentages for fourteen different values within the field of technology. You will be presented with a statement, and then you will answer with your opinion on the statement, from <b>Strongly Agree</b> to <b>Strongly Disagree</b>, with each answer slightly affecting your scores. At the end of the quiz, your answers will be compared to the maximum possible for each value, thus giving you a percentage. Answer honestly!<br /><br />
     There are <b><u><span id="numOfQuestions"></span></u></b> questions in the test.</p>
 
 <h2><a id="anchor">What are the twelve values?</a></h2>
-    <p>There are six axes - Copyright, Technicality, Modernity, Privacy, Popularity, and Centralization. The values are:</p>
+    <p>There are seven axes - Area, Copyright, Technicality, Modernity, Privacy, Popularity, and Centralization. The values are:</p>
     <div class="explanation_bg">
+        <div class="spacer">
+            <div class="explanation_blurb_left">
+                <p class="value"><b style="color:#e04b0f;">FRONT-END</b></p>
+                <p class="blurb-text">
+                    If you have a higher Front-End value, you are more likely to be proficient in developing apps on the front-end side.
+                </p>
+            </div>
+            <div class="explanation_axis">
+                <p class="axis_name">AREA</p>
+                <img class="arrow" src="double_arrow.svg"></img>
+            </div>
+            <div class="explanation_blurb_right">
+                <p class="value"><b style="color:#1628ce;">BACK-END</b></p>
+                <p class="blurb-text">
+                    If you have a higher Back-End value, you are more likely to be proficient in developing apps on the back-end side.
+                </p>
+            </div>
+        </div>
         <div class="spacer">
             <div class="explanation_blurb_left">
                 <p class="value"><b style="color:#df841c;">FOSS</b></p>
                 <p class="blurb-text">
-                    Those with higher Equality scores believe the economy should distribute value evenly among the populace. They tend to support progressive tax codes, social programs, and at high values, socialism.
+                    Those with high FOSS values believe in free and open source software. They are likely to be contributors, maintainers, and users of open-source software.
                 </p>
             </div>
             <div class="explanation_axis">
@@ -48,7 +66,7 @@
             <div class="explanation_blurb_right">
                 <p class="value"><b style="color:#dad75b;">PROPRIETARY</b></p>
                 <p class="blurb-text">
-                    Those with higher Market scores believe the economy should be focused on rapid growth. They tend to support lower taxes, privatization, deregulation, and at high values, laissez-faire capitalism.
+                    Those with high Proprietary scores believe software should be proprietary; closed-source. They often stick to closed-source software exclusively and don't share the source code of their own projects.
                 </p>
             </div>
         </div>
@@ -56,7 +74,7 @@
             <div class="explanation_blurb_left">
                 <p class="value"><b style="color:#638a0a;">BASIC</b></p>
                 <p class="blurb-text">
-                    Those with higher Nation scores are patriotic and nationalist. They often believe in an aggressive foreign policy, valuing the military, strength, sovereignty, and at high values, territorial expansion.
+                    Those with high Basic scores often stick to user-friendly GUI options whenever possible. They tend to avoid the command line and only use it as a last resort.
                 </p>
             </div>
             <div class="explanation_axis">
@@ -64,9 +82,9 @@
                 <img class="arrow" src="double_arrow.svg"></img>
             </div>
             <div class="explanation_blurb_right">
-                <p class="value"><b style="color:#0ad17e;">TECHNICAL</b></p>
+                <p class="value"><b style="color:#0ad17e;">POWERUSER</b></p>
                 <p class="blurb-text">
-                    Those with higher Globe scores are cosmopolitan and globalist. They often believe in a peaceful foreign policy, emphasizing diplomacy, cooperation, integration, and at high values, a world government.
+                    Those with high Poweruser scores are proficient in the command line - it is no stranger to them. They enjoy delving head-first into config files and writing their own shell scripts.
                 </p>
             </div>
         </div>
@@ -74,7 +92,7 @@
             <div class="explanation_blurb_left">
                 <p class="value"><b style="color:#fb2d2d;">NEWSCHOOL</b></p>
                 <p class="blurb-text">
-                    Those with higher Liberty scores believe in strong civil liberties. They tend to support democracy and oppose state intervention in personal lives. Note that this refers to civil liberties, not economic liberties.
+                    Those with high Newschool scores are not afraid to try the latest cutting-edge technologies, languages, software, etc... They get excited when they hear about a new framework, and will give it a try in their new side project.
                 </p>
             </div>
             <div class="explanation_axis">
@@ -84,7 +102,7 @@
             <div class="explanation_blurb_right">
                 <p class="value"><b style="color:#9b180f;">OLDSCHOOL</b></p>
                 <p class="blurb-text">
-                    Those with higher Authority scores believe in strong state power. They tend to support state intervention in personal lives, government surveillance, and at high values, censorship or autocracy.
+                    Those with high Oldschool scores stick to the old battle-tested software of yore. They're reluctant to switch to new tech, and are more likely to be veterans of the industry.
                 </p>
             </div>
         </div>
@@ -92,7 +110,7 @@
             <div class="explanation_blurb_left">
                 <p class="value"><b style="color:#c71de9;">CONVENIENCE</b></p>
                 <p class="blurb-text">
-                    Those with higher Tradition scores believe in traditional values and strict adherence to a moral code. Though not always, they are usually religious, and support the status quo or the status quo ante.
+                    Those with higher Convenience scores are ready to give up privacy for the sake of convenience. They have their location turned on constantly and probably own a smart assistant.
                 </p>
             </div>
             <div class="explanation_axis">
@@ -102,7 +120,7 @@
             <div class="explanation_blurb_right">
                 <p class="value"><b style="color:#df3994;">PRIVACY</b></p>
                 <p class="blurb-text">
-                    Those with higher Progress scores believe in social change and rationality. Though not always, they are usually secular or atheist, and support environmental action and scientific or technological research.
+                    Those with higher Privacy scores are privacy enthusiasts who you'll often catch using a virtual machine and an alternative search engine. They are trained in opsec and are experts in masking their identity online.
                 </p>
             </div>
         </div>
@@ -110,7 +128,7 @@
             <div class="explanation_blurb_left">
                 <p class="value"><b style="color:#7dc59d;">POPULAR</b></p>
                 <p class="blurb-text">
-                    Those with higher Tradition scores believe in traditional values and strict adherence to a moral code. Though not always, they are usually religious, and support the status quo or the status quo ante.
+                    Those with higher Popular scores prefer using popular software with more mature tooling and economies.
                 </p>
             </div>
             <div class="explanation_axis">
@@ -120,7 +138,7 @@
             <div class="explanation_blurb_right">
                 <p class="value"><b style="color:#056937;">NICHE</b></p>
                 <p class="blurb-text">
-                    Those with higher Progress scores believe in social change and rationality. Though not always, they are usually secular or atheist, and support environmental action and scientific or technological research.
+                    Those with higher Niche scores prefer using lesser-known software. The economy might be less mature, but for these people, the appeal of using less popular tech makes up for it.
                 </p>
             </div>
         </div>
@@ -128,7 +146,7 @@
             <div class="explanation_blurb_left">
                 <p class="value"><b style="color:#3ae224;">CENTRALIZED</b></p>
                 <p class="blurb-text">
-                    Those with higher Tradition scores believe in traditional values and strict adherence to a moral code. Though not always, they are usually religious, and support the status quo or the status quo ante.
+                    Those with higher Centralized scores believe online services should be centralized. They are fine with having their data on the service belong to a singular entity.
                 </p>
             </div>
             <div class="explanation_axis">
@@ -138,7 +156,7 @@
             <div class="explanation_blurb_right">
                 <p class="value"><b style="color:#66bb5b;">DECENTRALIZED</b></p>
                 <p class="blurb-text">
-                    Those with higher Progress scores believe in social change and rationality. Though not always, they are usually secular or atheist, and support environmental action and scientific or technological research.
+                    Those with higher Decentralized scores are passionate about decentralization, and enjoy the additional freedom from using decentralized services.
                 </p>
             </div>
         </div>
