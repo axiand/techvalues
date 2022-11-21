@@ -27,19 +27,26 @@
 
 <!-- JavaScript for the test itself -->
 <script>
-    var max_econ, max_dipl, max_govt, max_scty; // Max possible scores
-    max_econ = max_dipl = max_govt = max_scty = 0;
-    let econ_array = new Array(questions.length);
-    let dipl_array = new Array(questions.length);
-    let govt_array = new Array(questions.length);
-    let scty_array = new Array(questions.length);
+    var max_fend, max_foss, max_basc, max_nscl, max_conv, max_popu, max_cent; // Max possible scores
+    max_fend = max_foss = max_basc = max_nscl = max_conv = max_popu = max_cent = 0;
+    let fend_array = new Array(questions.length);
+    let foss_array = new Array(questions.length);
+    let basc_array = new Array(questions.length);
+    let nscl_array = new Array(questions.length);
+    let conv_array = new Array(questions.length);
+    let popu_array = new Array(questions.length);
+    let cent_array = new Array(questions.length);
+
     var qn = 0; // Question number
     init_question();
     for (var i = 0; i < questions.length; i++) {
-        max_econ += Math.abs(questions[i].effect.econ)
-        max_dipl += Math.abs(questions[i].effect.dipl)
-        max_govt += Math.abs(questions[i].effect.govt)
-        max_scty += Math.abs(questions[i].effect.scty)
+        max_fend += Math.abs(questions[i].effect.fend)
+        max_foss += Math.abs(questions[i].effect.foss)
+        max_basc += Math.abs(questions[i].effect.basc)
+        max_nscl += Math.abs(questions[i].effect.nscl)
+        max_conv += Math.abs(questions[i].effect.conv)
+        max_popu += Math.abs(questions[i].effect.popu)
+        max_cent += Math.abs(questions[i].effect.cent)
     }
     function init_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question;
@@ -55,10 +62,13 @@
     }
 
     function next_question(mult) {
-        econ_array[qn] = mult*questions[qn].effect.econ
-        dipl_array[qn] = mult*questions[qn].effect.dipl
-        govt_array[qn] = mult*questions[qn].effect.govt
-        scty_array[qn] = mult*questions[qn].effect.scty
+        fend_array[qn] = mult*questions[qn].effect.fend
+        foss_array[qn] = mult*questions[qn].effect.foss
+        basc_array[qn] = mult*questions[qn].effect.basc
+        nscl_array[qn] = mult*questions[qn].effect.nscl
+        conv_array[qn] = mult*questions[qn].effect.conv
+        popu_array[qn] = mult*questions[qn].effect.popu
+        cent_array[qn] = mult*questions[qn].effect.cent
         qn++;
         if (qn < questions.length) {
             init_question();
@@ -80,15 +90,21 @@
     }
 
     function results() {
-        let final_econ = econ_array.reduce((a, b) => a + b, 0)
-        let final_dipl = dipl_array.reduce((a, b) => a + b, 0)
-        let final_govt = govt_array.reduce((a, b) => a + b, 0)
-        let final_scty = scty_array.reduce((a, b) => a + b, 0)
+        let final_fend = fend_array.reduce((a, b) => a + b, 0)
+        let final_foss = foss_array.reduce((a, b) => a + b, 0)
+        let final_basc = basc_array.reduce((a, b) => a + b, 0)
+        let final_nscl = nscl_array.reduce((a, b) => a + b, 0)
+        let final_conv = conv_array.reduce((a, b) => a + b, 0)
+        let final_popu = popu_array.reduce((a, b) => a + b, 0)
+        let final_cent = cent_array.reduce((a, b) => a + b, 0)
         location.href = `results.html`
-            + `?e=${calc_score(final_econ,max_econ)}`
-            + `&d=${calc_score(final_dipl,max_dipl)}`
-            + `&g=${calc_score(final_govt,max_govt)}`
-            + `&s=${calc_score(final_scty,max_scty)}`
+            + `?fe=${calc_score(final_fend,max_fend)}`
+            + `?fo=${calc_score(final_foss,max_foss)}`
+            + `?b=${calc_score(final_basc,max_basc)}`
+            + `?n=${calc_score(final_nscl,max_nscl)}`
+            + `?co=${calc_score(final_conv,max_conv)}`
+            + `?p=${calc_score(final_popu,max_popu)}`
+            + `?ce=${calc_score(final_cent,max_cent)}`
     }
 </script>
 </body>
