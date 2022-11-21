@@ -99,12 +99,12 @@
         let final_cent = cent_array.reduce((a, b) => a + b, 0)
         location.href = `results.html`
             + `?fe=${calc_score(final_fend,max_fend)}`
-            + `?fo=${calc_score(final_foss,max_foss)}`
-            + `?b=${calc_score(final_basc,max_basc)}`
-            + `?n=${calc_score(final_nscl,max_nscl)}`
-            + `?co=${calc_score(final_conv,max_conv)}`
-            + `?p=${calc_score(final_popu,max_popu)}`
-            + `?ce=${calc_score(final_cent,max_cent)}`
+            + `&fo=${calc_score(final_foss,max_foss)}`
+            + `&b=${calc_score(final_basc,max_basc)}`
+            + `&n=${calc_score(final_nscl,max_nscl)}`
+            + `&co=${calc_score(final_conv,max_conv)}`
+            + `&p=${calc_score(final_popu,max_popu)}`
+            + `&ce=${calc_score(final_cent,max_cent)}`
     }
 </script>
 </body>
