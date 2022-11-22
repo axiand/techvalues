@@ -1,2 +1,4 @@
-# 8values.github.io
-The 8values Political Quiz measures individuals' political values, including Equality, Nation, Liberty, Tradition, Markets, World, Authority, and Progress.
+# TechValues
+A just-for-fun quiz that judges you based on several axes relating to technology
+
+# [Check it out here](https://axiand.github.io/techvalues)
